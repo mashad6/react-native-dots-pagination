@@ -105,7 +105,7 @@ export default class Dots extends Component {
       alignDotsOnXAxis,
     } = this.props;
     const width = isActive ? activeDotWidth : passiveDotWidth;
-    const marginTop = alignDotsOnXAxis || !isActive ? 0 : -width / 6;
+    const marginTop = alignDotsOnXAxis || !isActive ? 0 : 0;
 
     let height = width;
 
@@ -153,7 +153,7 @@ export default class Dots extends Component {
       marginHorizontal * (list.length * 2);
 
     return (
-      <View style={Styles.container}>
+      <View style={{justifyContent:'center', alignItems:'center'}}>
         <ScrollView
           ref={(el) => {
             this.scrollRef = el;
